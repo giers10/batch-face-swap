@@ -87,7 +87,8 @@ def listFiles(input_path, searchSubdir, allFiles):
     except FileNotFoundError:
         if input_path != "":
             print(f'Directory "{input_path}" not found!')
-
+            
+    allFiles.sort()
     return allFiles
 
 def custom_save_image(p, image, output_path, forced_filename, suffix, info):
